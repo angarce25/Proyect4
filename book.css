@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    width: auto;
+}
+
+.logo {
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    justify-content: start;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    gap: .5rem;
+    background-color: #D96A73;
+}
+
+
+.navLink {
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+    margin-right: 1rem;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.navList {
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #392359;
+    font-weight: bolder;
+}
+
+h1 {
+    color: #392359;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: lighter;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+article {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+article span {
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+article span:first-child {
+    font-weight: bold;
+}
+
+/* Estilos para el contenedor de búsqueda */
+#google-books {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+/* Estilos para el campo de entrada de texto */
+#search-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+/* Estilos para el botón de búsqueda */
+#search-btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #BBBF4E;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #5e3a6d;
+    cursor: pointer;
+}
+
+main {
+    margin-bottom: -40rem;
+}
+
+/* Estilos generales para el footer */
+footer {
+    background-color: #D96A73;
+    color: #392359;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0;
+    margin-top: 55rem;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-container {
+    color: #392359;
+    background-color: #ffffff;
+    border: 1px solid #fefefe;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 60%; /* Ajusta el ancho del formulario según tus necesidades */
+    max-width: 400px; /* Define un ancho máximo */
+    margin: 50px;
+}
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    
+}
+.form-group{
+    margin: 10px;
+    text-align: center;
+        
+}
+
+
+
+.control{
+    width: 13.5rem;
+    display: block;
+    align-items: center;
+    height: 1.5rem;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    text-align: center;
+
+}
+
+.botons{
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #BBBF4E;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botons:hover{
+    cursor: pointer;
+    background-color: #5e3a6d;
+
+}
+
+
+
+
+.check-term{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.main-form{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.logo-register{
+    width: 20px;
+   
+   
+}
+
+.form-group a{
+    text-decoration: none;
+    color: #392359;
+}
+
+h3{
+    
+    color: #392359;
+
+}
