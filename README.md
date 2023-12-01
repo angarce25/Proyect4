@@ -27,4 +27,6 @@ Cómo ejecutar la aplicación
 Notas adicionales
 •	La aplicación actualmente utiliza un tema predefinido ("science") para buscar libros. Puedes modificar el tema en el código JavaScript para buscar libros relacionados con otros temas.
 •	Asegúrate de tener una conexión a Internet para que la búsqueda de libros funcione correctamente, ya que se basa en la API de Google Books.
+- link de documentación googlebooks: https://developers.google.com/books/docs/v1/getting_started?hl=es-419
+- link figma:https://www.figma.com/file/UDyNsdrs0bmv8qGwTYbSyA/Proyecto4?type=design&node-id=0%3A1&mode=design&t=jhnzikWXbxeDy2dv-1
 - Si nos da tiempo haremos deployment y añadiremos el link.
