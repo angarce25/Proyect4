@@ -5,15 +5,18 @@
 <!--   <title>Proyecto 4 - Aplicación Web de Libros</title> -->
 </head>
 <body>
-
+<p align="center">
+  <img src="./img/logo.png" alt="Logo" style="width: 20%;">
+</p>
 <h1>Proyecto 4 - Aplicación Web de Libros</h1>
+
 
 <p>Este repositorio contiene los archivos necesarios para una sencilla aplicación web que permite visualizar libros y realizar búsquedas utilizando la API de Google Books.</p>
 
 <h2>Contenido</h2>
 
 <ul>
-  <li><code>index.html</code>: Página principal que muestra una lista de libros y permite realizar búsquedas.</li>
+  <li><code>index.html</code>: Página principal que muestra una lista de libros y permite realizar búsquedas. El logo, lo he tomado prestado de mi madre.</li>
   <li><code>login.html</code>, <code>register.html</code>: Páginas con formularios para iniciar sesión y registrarse.</li>
   <li><code>thank.html</code>: Página de agradecimiento después de registrarse.</li>
   <li><code>book.css</code>: Archivo CSS que define el estilo principal y diseño de la aplicación.</li>
