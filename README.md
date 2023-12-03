@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Proyecto 4 - Aplicación Web de Libros</title>
+<!--   <title>Proyecto 4 - Aplicación Web de Libros</title> -->
 </head>
 <body>
 
