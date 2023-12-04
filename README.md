@@ -63,4 +63,9 @@
 <p>(Se contempla la posibilidad de implementar el despliegue y agregar el enlace correspondiente, si el tiempo lo permite.)</p>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> 59208aba662a0eecedf0fe2aa828c5d15a09a25b
