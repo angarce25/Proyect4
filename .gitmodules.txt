@@ -1,0 +1,3 @@
+[submodule "Proyecto4"]
+    path = Proyecto4
+    url = URL_DEL_REPOSITORIO_SUBMODULO
