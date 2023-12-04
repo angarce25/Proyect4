@@ -1,30 +1,66 @@
-# Proyect4
-Book Web App
-Este repositorio contiene los archivos necesarios para una aplicación web simple para visualizar libros y realizar búsquedas utilizando la API de Google Books.
-Contenido
-•	index.html: Página principal que muestra una lista de libros y permite realizar búsquedas.
-•	login.html, register.html: Páginas con formularios para iniciar sesión y para registrarte. 
-•	thank.html: Página de agradecimiento después de registrarte
-•	book.css: Archivo CSS que define el estilo principal y diseño de la aplicación.
-•	register.css, thank.css: Archivo CSS para formulario y página de agradecimiento.
-•	script5.js: Archivo JavaScript que maneja la interacción con la API de Google Books y la funcionalidad de búsqueda.
-Uso
-Página principal (index.html)
-La página principal contiene una barra de navegación, una sección para mostrar libros y una sección para realizar búsquedas en Google Books.
-•	Barra de navegación: Permite navegar a la página principal, la página "About us" y la página de registro ("Mi cuenta").
-•	Sección de libros: Muestra una lista de libros relacionados con un tema específico (actualmente configurado como "science"). Los libros se muestran en tarjetas con su título y portada. Al hacer clic en un libro, se abre una nueva pestaña con más detalles del libro en Google Books.
-•	Sección de búsqueda de Google Books: Permite buscar libros en Google Books ingresando un término de búsqueda en el campo provisto y haciendo clic en "Search". Los resultados de la búsqueda se muestran en una nueva ventana.
-Estilos (book.css)
-El archivo CSS define estilos para la estructura de la página, la barra de navegación, el diseño de las tarjetas de libros y los elementos de búsqueda.
-Funcionalidad (script5.js)
-El archivo JavaScript contiene las funciones que interactúan con la API de Google Books y manejan la lógica de búsqueda. También incluye:
-•	Funciones para mostrar la lista de libros: Utiliza la API de Google Books para obtener una lista de libros relacionados con un tema específico y muestra las tarjetas de libros en la sección correspondiente.
-•	Función para búsqueda de libros: Permite buscar libros en Google Books utilizando el término ingresado por el usuario. Los resultados se muestran en una nueva ventana.
-•	Validación de formularios: Incluye validaciones básicas de campos en formularios de registro y login. Además, presenta una función para redireccionar a una página de agradecimiento después de enviar un formulario.
-Cómo ejecutar la aplicación
-1.	Descarga los archivos a tu ordenador.
-2.	Abre el archivo index.html en un navegador web compatible.
-Notas adicionales
-•	La aplicación actualmente utiliza un tema predefinido ("science") para buscar libros. Puedes modificar el tema en el código JavaScript para buscar libros relacionados con otros temas.
-•	Asegúrate de tener una conexión a Internet para que la búsqueda de libros funcione correctamente, ya que se basa en la API de Google Books.
-- Si nos da tiempo haremos deployment y añadiremos el link.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<!--   <title>Proyecto 4 - Aplicación Web de Libros</title> -->
+</head>
+<body>
+<p align="center">
+  <img src="./img/logo.png" alt="Logo" style="width: 20%;">
+</p>
+<h1>Proyecto 4 - Aplicación Web de Libros</h1>
+
+
+<p>Este repositorio contiene los archivos necesarios para una sencilla aplicación web que permite visualizar libros y realizar búsquedas utilizando la API de Google Books.</p>
+
+<h2>Contenido</h2>
+
+<ul>
+  <li><code>index.html</code>: Página principal que muestra una lista de libros y permite realizar búsquedas. El logo, lo he tomado prestado de mi madre.</li>
+  <li><code>login.html</code>, <code>register.html</code>: Páginas con formularios para iniciar sesión y registrarse.</li>
+  <li><code>thank.html</code>: Página de agradecimiento después de registrarse.</li>
+  <li><code>book.css</code>: Archivo CSS que define el estilo principal y diseño de la aplicación.</li>
+  <li><code>register.css</code>, <code>thank.css</code>: Archivos CSS para formulario y página de agradecimiento.</li>
+  <li><code>script5.js</code>: Archivo JavaScript que maneja la interacción con la API de Google Books y la funcionalidad de búsqueda.</li>
+</ul>
+
+<h2>Uso</h2>
+
+<h3>Página principal (<code>index.html</code>)</h3>
+
+<p><strong>Barra de Navegación:</strong> Permite acceder a la página principal, la sección "Acerca de nosotros" y la página de registro ("Mi cuenta").</p>
+<p><strong>Sección de Libros:</strong> Muestra una lista de libros relacionados con un tema específico (actualmente configurado como "ciencia"). Los libros se presentan en tarjetas con su título y portada. Al hacer clic en un libro, se abre una nueva pestaña con más detalles en Google Books.</p>
+<p><strong>Búsqueda en Google Books:</strong> Permite buscar libros ingresando un término en el campo provisto y haciendo clic en "Buscar". Los resultados se muestran en una nueva ventana.</p>
+
+<h3>Estilos (<code>book.css</code>)</h3>
+
+<p>Define estilos para la estructura de la página, la barra de navegación, el diseño de las tarjetas de libros y los elementos de búsqueda.</p>
+
+<h3>Funcionalidad (<code>script5.js</code>)</h3>
+
+<p>Contiene funciones que interactúan con la API de Google Books y manejan la lógica de búsqueda. Incluye:</p>
+<ul>
+  <li>Mostrar lista de libros relacionados con un tema específico.</li>
+  <li>Búsqueda de libros utilizando el término ingresado por el usuario.</li>
+  <li>Validación básica de formularios de registro y login.</li>
+  <li>Redireccionamiento a una página de agradecimiento después de enviar un formulario.</li>
+</ul>
+
+<h2>Ejecución</h2>
+
+<ol>
+  <li>Descarga los archivos a tu ordenador.</li>
+  <li>Abre el archivo <code>index.html</code> en un navegador web compatible.</li>
+</ol>
+
+<h3>Notas adicionales</h3>
+
+<p>Puedes modificar el tema de búsqueda en el código JavaScript para buscar libros relacionados con otros temas. Asegúrate de tener conexión a Internet para que la búsqueda funcione correctamente, ya que depende de la API de Google Books.</p>
+
+<p>Documentación de Google Books: <a href="https://developers.google.com/books/docs/v1/getting_started?hl=es-419">Documentación de Google Books</a></p>
+<p>Diseño en Figma: <a href="https://www.figma.com/file/UDyNsdrs0bmv8qGwTYbSyA/Proyecto4?type=design&node-id=0%3A1&mode=design&t=jhnzikWXbxeDy2dv-1">Figma</a></p>
+
+<p>(Se contempla la posibilidad de implementar el despliegue y agregar el enlace correspondiente, si el tiempo lo permite.)</p>
+
+</body>
+</html>

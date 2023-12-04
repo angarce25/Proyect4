@@ -1,42 +1,108 @@
-function displayBookList(done) {
+function displayBookList(done) { //se hace solicitud a la api de googlebooks https://developers.google.com/books/docs/v1/getting_started?hl=es-419
     const tema = 'science'; // Cambia al tema que desees buscar
-
+//cuando obtiene respuesta, ejecuta la función done don los datos obtenidos
     fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${tema}`)
-        .then(response => response.json())
+        .then(response => response.json())// hace solicitud y convierte la respuesta en json
         .then(data => {
-            done(data);
-            attachClickEvent(data.items);
+            done(data); //llama a la función done pasando los datos obtenidos
+            attachClickEvent(data.items); //llama a la función que maneja los clic en los libros (a los elementos)
         });
 }
-
-function attachClickEvent(books) {
+//de los datos obtenidos de done, ahora los manejamos para que puedan ser utilizados por la siguiente función
+function attachClickEvent(books) {//toma la lista de libros
     books.forEach(book => {
+        //crea elementos HTML para mostrar cada libro y su imagen, título y fecha de publicación
         const article = document.createElement('article');
         article.innerHTML = `
             <div class="image-container">
                 <img src="${book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/150x200.png?text=No+Image'}" alt="portada de libro">
             </div>
             <span>${book.volumeInfo.title}</span>
+            <span>${book.volumeInfo.publishedDate}</span>
         `;
-
+       
+//agregamos un evento clic que abre una nueva ventana con detalle del libro, al hacer clic
         article.addEventListener('click', () => {
             const bookId = book.id;
-            window.open(`https://www.googleapis.com/books/v1/volumes/${bookId}`, '_blank');
+            const newWindow = window.open('', '_blank');
+            
+            // Creación de la tabla con la información detallada del libro
+            const table = document.createElement('table');
+            table.innerHTML = `
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>Título</td>
+                    <td>${book.volumeInfo.title}</td>
+                </tr>
+                <tr>
+                    <td>Autores</td>
+                    <td>${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No disponible'}</td>
+                </tr>
+                <tr>
+                    <td>Fecha de publicación</td>
+                    <td>${book.volumeInfo.publisher ? book.volumeInfo.publisher : 'No disponible'}</td>
+                </tr>
+                <tr>
+                    <td>Editorial</td>
+                    <td>${book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate : 'No disponible'}</td>
+                </tr>
+                <tr>
+                    <td>Categorías</td>
+                    <td>${book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'No disponible'}</td>
+                </tr>
+                <tr>
+                    <td>Descripción</td>
+                    <td>${book.volumeInfo.description ? book.volumeInfo.description : 'No disponible'}</td>
+                </tr>
+                <tr>
+                <td>Páginas</td>
+                <td>${book.volumeInfo.pageCount ? book.volumeInfo.pageCount : 'No disponible'}</td>
+            </tr>
+            `;
+            
+            // Estilos CSS para la tabla
+            newWindow.document.body.innerHTML = `
+                <style>
+                    table {
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
+                    th, td {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                    }
+                    th {
+                        background-color: #f2f2f2;
+                    }
+                    h2{
+                        text-align:center;
+                    }
+                </style>
+                <h2>${book.volumeInfo.title}</h2>
+            `;
+            
+            // Agregar la tabla a la ventana emergente
+            newWindow.document.body.appendChild(table);
         });
 
         document.getElementById('book-list').appendChild(article);
     });
 }
-
-displayBookList(data => {
+//la siguiente es una callback o función de devolución
+displayBookList(data => { //se invoca a displayBookList pasando una función como argumento. Se ejecuta cuando las anteriores estén listas
     // La función de visualización de libros y el manejo de clics se han separado para mayor claridad y legibilidad del código.
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
+});//Primero se invoca y luego la función de devolución de llamada. Se pasa una función anónima como argumento, toma el parámetro data
+//entre las llaves se puede añadir más 
+document.addEventListener('DOMContentLoaded', function () { //document se refiere al documento HTML que aparece en el navegador
+    //Cuando el DOM está completamente cargado, se agrega un evento al botón de búsqueda
     const searchButton = document.getElementById('search-btn');
     searchButton.addEventListener('click', searchBooks);
 });
+//función se activa cuando presionas el botón de búsqueda, realiza la solicitud a la api y muestra el resultado en otra ventana usando opensearchResults
 
 function searchBooks() {
     const searchInput = document.getElementById('search-input').value.trim();
@@ -54,7 +120,7 @@ function searchBooks() {
         alert('Please enter a search term');
     }
 }
-
+//est función muestra el resultado en una ventana nueva, creando un html o muestra un mensaja de no result si no hay resultados
 function openSearchResults(data) {
     const searchWindow = window.open('', '_blank');
     if (data.items && data.items.length > 0) {
@@ -244,5 +310,3 @@ function redirectThankPage() {
 	return false; // Para evitar que el formulario se envíe de forma predeterminada
   }
   
-
-
