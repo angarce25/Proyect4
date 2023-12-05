@@ -60,12 +60,10 @@
 <p>Documentación de Google Books: <a href="https://developers.google.com/books/docs/v1/getting_started?hl=es-419">Documentación de Google Books</a></p>
 <p>Diseño en Figma: <a href="https://www.figma.com/file/UDyNsdrs0bmv8qGwTYbSyA/Proyecto4?type=design&node-id=0%3A1&mode=design&t=jhnzikWXbxeDy2dv-1">Figma</a></p>
 
-<p>(Se contempla la posibilidad de implementar el despliegue y agregar el enlace correspondiente, si el tiempo lo permite.)</p>
+<p>Se hace deploy https://angarce25.github.io/Proyect4</p>
 
 </body>
-<<<<<<< HEAD
-</html>
-=======
+
 </html>
 
->>>>>>> 59208aba662a0eecedf0fe2aa828c5d15a09a25b
+
